@@ -10,46 +10,80 @@
 </head>
 
 <body>
-    <h1>Yizhi Zhou's CCT460 Coding Showcase (Assignment 1, 2, 3)</h1>
+    <header>
+        <h1>Yizhi Zhou's CCT460 Coding Showcase</h1>
+    </header>
 
     <!-- Menu -->
-    <div class="menu">
+    <nav class="menu">
         <button class="active" onclick="scrollToSection('sketch1')">Simple Drawing</button>
-        <button class="" onclick="scrollToSection('sketch2')">Repeating Animation</button>
-        <button class="" onclick="scrollToSection('sketch3')">Doge Pet! (Tamagotchi)</button>
-    </div>
+        <button onclick="scrollToSection('sketch2')">Repeating Animation</button>
+        <button onclick="scrollToSection('sketch3')">Doge Pet! (Tamagotchi)</button>
+    </nav>
 
     <div class="container">
-        <div class="a1" id="sketch1">
-            <h2>Toronto Skyline and Yizhi Zhou</h2>
-            <div class="image-container">
-                <img src="images/a1.jpg" alt="Toronto Skyline and Yizhi Zhou">
+        <section class="project-section a1" id="sketch1">
+            <h2>A1 - Simple Drawing</h2>
+            <div class="project-content">
+                <div class="image-container">
+                    <img src="images/a1.jpg" alt="Toronto Skyline and Yizhi Zhou">
+                </div>
+                <div class="project-description">
+                    <h2> "Toronto Skyline"</h2>
+                    <h3>Brief</h3>
+                    <p>Replicate a photo by using p5js regular and irregular shapes. This work explores my ability and flexibility in applying p5js functions. I chose a photo I had captured on Toronto Central Island. This photo includes multiple shapes and is a good practice for understanding p5js.</p>
+                </div>
             </div>
-        </div>
+        </section>
 
-        <div class="a2" id="sketch2">
-            <h2>Repeating Animation</h2>
-            <div class="image-container">
-                <img src="images/a2_1.jpg" alt="A2_1">
-                <img src="images/a2_2.png" alt="A2_2">
+        <section class="project-section a2" id="sketch2">
+            <h2>A2 - Repeating Animation</h2>
+            <div class="project-content">
+                <div class="image-container">
+                    <img src="images/a2_1.jpg" alt="Animation Frame 1">
+                    <img src="images/a2_2.png" alt="Animation Frame 2">
+                </div>
+                <div class="project-description">
+                    <h2>"Falling Stars"</h2>
+                    <h3>Brief</h3>
+                    <p>I integrated the idea of the Week 3 in-class practice and shooting star. It looks abstract, but I think it is quite artistic (maybe not). Through this assignment, I practiced the knowledge (variable, for loop, shape, rotate, map, random, OOP, and array) I learned in CCT460.</p>
+                    <h3>Key Features</h3>
+                    <ul>
+                        <li>Loop Animation (background and shooting stars)</li>
+                        <li>Flowing Effect</li>
+                        <li>Responsive Design (click mouse button)</li>
+                    </ul>
+                    </br></br></br>
+                    <h5>"I got the idea from Elon Musk's Twitter post and a photo I took of the sky in Atlanta."</h5>
+                    <h3>Success is uncertain, but entertainment is guaranteed! ✨ - Elon Musk</h3>
+                </div>
             </div>
-        </div>
-        <div class="a3" id="sketch3">
-            <h2>Doge</h2>
-        </div>
+        </section>
+
+        <section class="project-section a3" id="sketch3">
+            <h2>A3 - Playing with a Tamagotchi!</h2>
+            <div class="project-content">
+                <div id="game-container"></div>
+                <div class="project-description">
+                    <h2>"Doge!"</h2>
+                    <h3>Brief</h3>
+                    <p>When you come home, you find there is a cute dog in your bedroom! You don't know his name but you can play with him and feed him!</p>
+                    <h3>Key Features</h3>
+                    <ul>
+                        <li>Interactive Design (you can feed and play with the doge)</li>
+                        <li>Stats Display (check Doge's status)</li>
+                        <li>Dynamic reactions (Doge will be emotional when he feels hungry)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
     </div>
-
-
 </body>
 
 <script>
     function scrollToSection(sectionId) {
         // Remove active class from all buttons
         const buttons = document.querySelectorAll('.menu button');
-        buttons.forEach(button => button.classList.remove('active'));
-        
-        // Add active class to clicked button
-        event.currentTarget.classList.add('active');
         
         // Scroll to the section
         const section = document.getElementById(sectionId);
@@ -61,4 +95,4 @@
         }
     }
 </script>
-</html>        
+</html>
