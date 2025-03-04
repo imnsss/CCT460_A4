@@ -10,19 +10,55 @@
 </head>
 
 <body>
-    <h2>Creative Coding Showcase</h2>
-    <div class="sketches-container">
-        <div id="sketch1">
-            <h3>Toronto Skyline</h3>
+    <h1>Yizhi Zhou's CCT460 Coding Showcase (Assignment 1, 2, 3)</h1>
+
+    <!-- Menu -->
+    <div class="menu">
+        <button class="active" onclick="scrollToSection('sketch1')">Simple Drawing</button>
+        <button class="" onclick="scrollToSection('sketch2')">Repeating Animation</button>
+        <button class="" onclick="scrollToSection('sketch3')">Doge Pet! (Tamagotchi)</button>
+    </div>
+
+    <div class="container">
+        <div class="a1" id="sketch1">
+            <h2>Toronto Skyline and Yizhi Zhou</h2>
+            <div class="image-container">
+                <img src="images/a1.jpg" alt="Toronto Skyline and Yizhi Zhou">
+            </div>
         </div>
-        <div id="sketch2">
-            <h3>Interactive Pattern</h3>
+
+        <div class="a2" id="sketch2">
+            <h2>Repeating Animation</h2>
+            <div class="image-container">
+                <img src="images/a2_1.jpg" alt="A2_1">
+                <img src="images/a2_2.png" alt="A2_2">
+            </div>
         </div>
-        <div id="sketch3">
-            <h3>Virtual Pet</h3>
+        <div class="a3" id="sketch3">
+            <h2>Doge</h2>
         </div>
     </div>
 
 
 </body>
+
+<script>
+    function scrollToSection(sectionId) {
+        // Remove active class from all buttons
+        const buttons = document.querySelectorAll('.menu button');
+        buttons.forEach(button => button.classList.remove('active'));
+        
+        // Add active class to clicked button
+        event.currentTarget.classList.add('active');
+        
+        // Scroll to the section
+        const section = document.getElementById(sectionId);
+        if (section) {
+            section.scrollIntoView({ 
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    }
+</script>
 </html>        

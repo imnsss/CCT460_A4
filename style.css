@@ -1,16 +1,87 @@
 body {
-  background-color: #f5f5f5;
+  background-color: #f8f8f8;
   font-family: 'Arial', sans-serif;
-  max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
+  padding-bottom: 70px; /* 根据 filter-menu 的高度调整 */
 }
 
-h2 {
+h1 {
   text-align: center;
   color: #333;
   padding: 20px 0;
-  font-size: 2.5em;
-  margin-bottom: 30px;
-  border-bottom: 2px solid #ddd;
+}
+
+.menu {
+  position: fixed;  /* fixed 定位 */
+  bottom: 0;        
+  left: 0;         
+  background-color: rgb(255, 255, 255);
+  z-index: 1000;
+  padding: 15px 0;
+  width: 100%;
+  box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+  text-align: center; 
+}
+
+.menu button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.menu button:hover {
+  background-color: #ddd;
+}
+
+.container > div {
+  border-bottom: 1px solid #ddd;
+  padding: 40px 0;
+}
+
+.container > div:last-child {
+  border-bottom: none;
+}
+
+#sketch1, #sketch2, #sketch3 {
+  min-height: 100vh;
+  padding: 20px;
+  scroll-margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+
+  margin: 20px 0;
+}
+
+.image-container img {
+  max-width: 45%;
+  height: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .image-container img {
+      max-width: 100%;
+  }
 }
