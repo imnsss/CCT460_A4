@@ -53,10 +53,9 @@ header {
 /* Add grid to adjust the section layout */
 .content {
   display: grid;
-  /* 2 columns in 1 row -> 50% 50% -> 口 口 */
-  grid-template-columns: 1fr 1fr;
+  /* 2 columns in 1 row -> 33.3% 66.6% -> 口 口口 */
+  grid-template-columns: 1fr 2fr;
   gap: 20px;
-  align-items: start;
 }
 
 /* change A3 section layout -> no image for A3 so i change the layout */
@@ -69,24 +68,19 @@ header {
 }
 
 /* Image part */
-.image-container {
-  width: 100%;
+.a1 .image-container{
+  width: 500px;
+}
+
+.a2 .image-container{
+  width: 400px;
 }
 
 .image-container img {
   width: 100%;
   border-radius: 5px;
   box-shadow: 0 1px 4px rgba(0,0,0,0.15);
-}
-
-/* Description setup */
-.description {
-  padding: 1rem;
-}
-
-.description h3 {
-  color: #2c3e50;
-  margin-bottom: 1rem;
+  margin-bottom: 5%;
 }
 
 footer {
@@ -96,8 +90,8 @@ footer {
 /* Media Query ...*/
 /* The size of sketches cannot automatically be adjusted, 
 I think it's because the canvas was fixed -> createCanvas(600, 400) */
-@media (max-width: 768px) {
-  .project-content {
+@media (max-width: 960px) {
+  .content {
       grid-template-columns: 1fr;
   }
   
