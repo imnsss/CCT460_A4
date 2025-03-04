@@ -196,6 +196,7 @@ var sketch3 = function(p) {
     document.addEventListener('contextmenu', event => event.preventDefault());
   }
 
+  // Draw
   p.draw = function() {
     p.image(bgImage, 0, 0, p.width, p.height);
     
@@ -210,6 +211,7 @@ var sketch3 = function(p) {
     updateItems();
   }
 
+  // Mouse and keyboard interaction
   p.mousePressed = function() {
     if (p.mouseButton === p.LEFT) {
       foodItems.push(new FoodItem(p.mouseX, p.mouseY));
@@ -237,7 +239,7 @@ var sketch3 = function(p) {
     }
   }
 
-  // Create the Doge
+  // Create the Doge!
   class VirtualPet {
     constructor(x, y) {
       this.pos = p.createVector(x, y);
@@ -250,6 +252,9 @@ var sketch3 = function(p) {
       this.playingTimer = 0;
     }
     
+    // Create CLass
+    
+    // update the mood
     update() {
       if (hunger < 30 || happiness < 30) {
         this.mood = "sad";
@@ -275,6 +280,7 @@ var sketch3 = function(p) {
         }
       }
 
+      // make the doge to follow the mouse
       if (this.isFollowing) {
         let targetX = p.mouseX;
         let targetY = p.mouseY;

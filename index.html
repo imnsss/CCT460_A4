@@ -14,7 +14,7 @@
         <h1>Yizhi Zhou's CCT460 Coding Showcase</h1>
     </header>
 
-    <!-- Menu -->
+    <!-- Interactive menu -->
     <nav class="menu">
         <button onclick="scrollToSection('sketch1')">A1 - Simple Drawing</button>
         <button onclick="scrollToSection('sketch2')">A2 - Repeating Animation</button>
@@ -29,7 +29,7 @@
                     <img src="images/a1.jpg" alt="Toronto Skyline and Yizhi Zhou">
                 </div>
                 <div class="description">
-                    <h2> "Toronto Skyline"</h2>
+                    <h2>"Toronto Skyline"</h2>
                     <h3>Brief</h3>
                     <p>Replicate a photo by using p5js regular and irregular shapes. This work explores my ability and flexibility in applying p5js functions. I chose a photo I had captured on Toronto Central Island. This photo includes multiple shapes and is a good practice for understanding p5js.</p>
                 </div>
@@ -67,7 +67,7 @@
                     <h2>"Doge!"</h2>
                     <h3>Brief</h3>
                     <p>When you come home, you find there is a cute dog in your bedroom! You don't know his name but you can play with him and feed him!</p>
-                    <p>I bought this assets 3 years ago and used the assets because I found it is hard to draw cute Tamagotchi by p5js shapes (my skill is limited). Therefore, I used the cute doge assets and focus more on the function implement.
+                    <p>I bought this cute assets 3 years ago and used the assets because I found it is hard to draw cute Tamagotchi by p5js shapes (my skill is limited). Therefore, I used the cute doge assets and focus more on the function implement.
                         Now the doge has hunger and happiness bar. The doge will feel bad if he starves!! Left click to feed him and right click to give him a bone! Hold Space can make him move!!</p>
                     <h3>Key Features</h3>
                     <ul>
@@ -86,10 +86,8 @@
 </footer>
 
 <script>
-
     // Animate effect when click menu button
     function scrollToSection(sectionId) {
-        const buttons = document.querySelectorAll('.menu button');
         
         // Scroll to the selected part
         const section = document.getElementById(sectionId);

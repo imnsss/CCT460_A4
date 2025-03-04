@@ -21,6 +21,7 @@ header {
   z-index: 100;
 }
 
+/* Button setup */
 .menu button {
   padding: 8px 14px;
   margin: 0 10px;
