@@ -1,3 +1,5 @@
+
+// A1
 var sketch1 = function(p) {
   p.setup = function() {
     let canvas = p.createCanvas(600, 400);
@@ -87,6 +89,7 @@ var sketch1 = function(p) {
   }
 }
 
+// A2
 var sketch2 = function(p) {
   var shootingStars = [];
 
@@ -161,6 +164,7 @@ var sketch2 = function(p) {
   }
 }
 
+// A3
 var sketch3 = function(p) {
   let pet;
   let foodItems = [];

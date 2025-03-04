@@ -2,7 +2,7 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f5f5f5;
+  background-color: #f3f3f3;
 }
 
 header {
@@ -12,16 +12,10 @@ header {
   color: rgb(255, 255, 255);
 }
 
-.subtitle {
-  color: #ecf0f1;
-  font-size: 1.2rem;
-  margin-top: 0.5rem;
-}
-
+/* Menu setup */
 .menu {
   position: sticky;
   top: 0;
-  background-color: 00;
   padding: 1rem;
   text-align: center;
   z-index: 100;
@@ -32,7 +26,7 @@ header {
   margin: 0 10px;
   border: none;
   border-radius: 6px;
-  background-color: #f1f1f1;
+  background-color: #e9e9e9;
   cursor: pointer;
   transition: background-color 0.3s;
 }
@@ -41,27 +35,39 @@ header {
   background-color: #ddd;
 }
 
+/* Main section */
 .container {
-  max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 5%;
 }
 
-.project-section {
-  background-color: white;
+.section {
+  background-color: #f6f6f6;
   border-radius: 10px;
   padding: 2rem;
   margin-bottom: 2rem;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.project-content {
+/* Add grid to adjust the section layout */
+.content {
   display: grid;
+  /* 2 columns in 1 row -> 50% 50% -> 口 口 */
   grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+  gap: 20px;
   align-items: start;
 }
 
+/* change A3 section layout -> no image for A3 so i change the layout */
+.content1 {
+  display: grid;
+  /* 1 columns in 1 row -> 100% -> 口 */
+  grid-template-columns: 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+/* Image part */
 .image-container {
   width: 100%;
 }
@@ -69,36 +75,26 @@ header {
 .image-container img {
   width: 100%;
   border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.15);
 }
 
-.project-description {
+/* Description setup */
+.description {
   padding: 1rem;
 }
 
-.project-description h3 {
+.description h3 {
   color: #2c3e50;
   margin-bottom: 1rem;
 }
 
-.project-description ul {
-  list-style-type: none; 
-  padding-left: 0;
+footer {
+  text-align: center;
 }
 
-.project-description li {
-  margin-bottom: 0.5rem;
-  padding-left: 1.5rem;
-  position: relative;
-}
-
-.project-description li:before {
-  content: "•";
-  color: #3498db;
-  position: absolute;
-  left: 0;
-}
-
+/* Media Query ...*/
+/* The size of sketches cannot automatically be adjusted, 
+I think it's because the canvas was fixed -> createCanvas(600, 400) */
 @media (max-width: 768px) {
   .project-content {
       grid-template-columns: 1fr;

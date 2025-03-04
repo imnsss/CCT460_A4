@@ -16,19 +16,19 @@
 
     <!-- Menu -->
     <nav class="menu">
-        <button class="active" onclick="scrollToSection('sketch1')">Simple Drawing</button>
-        <button onclick="scrollToSection('sketch2')">Repeating Animation</button>
-        <button onclick="scrollToSection('sketch3')">Doge Pet! (Tamagotchi)</button>
+        <button onclick="scrollToSection('sketch1')">A1 - Simple Drawing</button>
+        <button onclick="scrollToSection('sketch2')">A2 - Repeating Animation</button>
+        <button onclick="scrollToSection('sketch3')">A3 - Playing with a Tamagotchi!</button>
     </nav>
 
     <div class="container">
-        <section class="project-section a1" id="sketch1">
+        <section class="section a1" id="sketch1">
             <h2>A1 - Simple Drawing</h2>
-            <div class="project-content">
+            <div class="content">
                 <div class="image-container">
                     <img src="images/a1.jpg" alt="Toronto Skyline and Yizhi Zhou">
                 </div>
-                <div class="project-description">
+                <div class="description">
                     <h2> "Toronto Skyline"</h2>
                     <h3>Brief</h3>
                     <p>Replicate a photo by using p5js regular and irregular shapes. This work explores my ability and flexibility in applying p5js functions. I chose a photo I had captured on Toronto Central Island. This photo includes multiple shapes and is a good practice for understanding p5js.</p>
@@ -36,14 +36,14 @@
             </div>
         </section>
 
-        <section class="project-section a2" id="sketch2">
+        <section class="section a2" id="sketch2">
             <h2>A2 - Repeating Animation</h2>
-            <div class="project-content">
+            <div class="content">
                 <div class="image-container">
-                    <img src="images/a2_1.jpg" alt="Animation Frame 1">
-                    <img src="images/a2_2.png" alt="Animation Frame 2">
+                    <img src="images/a2_1.jpg" alt="photo of the sky in Atlanta">
+                    <img src="images/a2_2.png" alt="Elon musk's tweet">
                 </div>
-                <div class="project-description">
+                <div class="description">
                     <h2>"Falling Stars"</h2>
                     <h3>Brief</h3>
                     <p>I integrated the idea of the Week 3 in-class practice and shooting star. It looks abstract, but I think it is quite artistic (maybe not). Through this assignment, I practiced the knowledge (variable, for loop, shape, rotate, map, random, OOP, and array) I learned in CCT460.</p>
@@ -60,14 +60,15 @@
             </div>
         </section>
 
-        <section class="project-section a3" id="sketch3">
+        <section class="section a3" id="sketch3">
             <h2>A3 - Playing with a Tamagotchi!</h2>
-            <div class="project-content">
-                <div id="game-container"></div>
-                <div class="project-description">
+            <div class="content1">
+                <div class="description">
                     <h2>"Doge!"</h2>
                     <h3>Brief</h3>
                     <p>When you come home, you find there is a cute dog in your bedroom! You don't know his name but you can play with him and feed him!</p>
+                    <p>I bought this assets 3 years ago and used the assets because I found it is hard to draw cute Tamagotchi by p5js shapes (my skill is limited). Therefore, I used the cute doge assets and focus more on the function implement.
+                        Now the doge has hunger and happiness bar. The doge will feel bad if he starves!! Left click to feed him and right click to give him a bone! Hold Space can make him move!!</p>
                     <h3>Key Features</h3>
                     <ul>
                         <li>Interactive Design (you can feed and play with the doge)</li>
@@ -80,12 +81,17 @@
     </div>
 </body>
 
+<footer>
+    <p>Copyright &copy; 2024 Yizhi Zhou</p>
+</footer>
+
 <script>
+
+    // Animate effect when click menu button
     function scrollToSection(sectionId) {
-        // Remove active class from all buttons
         const buttons = document.querySelectorAll('.menu button');
         
-        // Scroll to the section
+        // Scroll to the selected part
         const section = document.getElementById(sectionId);
         if (section) {
             section.scrollIntoView({ 
